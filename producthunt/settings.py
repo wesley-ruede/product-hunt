@@ -126,7 +126,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'producthunt/static/') #static directories
+]
+
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') #added static root
+
 
 #settings initialized -> postgresql and .gitignore before runserver
 #migrations complete before runserver
@@ -140,3 +146,11 @@ STATIC_URL = '/static/'
 #adjusted settings - TEMPLATES 'DIRS'
 #adjusted base.html 
 #runserver success
+#import bootstrap base.html
+#removed main class base.html
+#created div container base.html
+#cleared href in home.html
+#added static file location
+#added static dirs
+#collected static
+#adjusted logo
