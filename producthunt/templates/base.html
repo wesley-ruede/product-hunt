@@ -49,12 +49,20 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-auto"> <!-- moved nav-items left -->
+					{% if user.is_authenticated %} <!-- if user is logged in -->
 					<li class="nav-item"> 
-						<a class="nav-link" href="">Sign Up</a> <!-- button -->
+						<a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">Log out</a> <!-- send to signup page -->
+						<form id="logout" method="POST" action="{% url 'logout'%}">{% csrf_token %}
+							<input type="hidden" />
+						</form>
+					{% else %}
+					<li class="nav-item"> 
+						<a class="nav-link" href="{% url 'signup' %}">Sign Up</a> <!-- send to signup page -->
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="">Login</a> <!-- button-->
+						<a class="nav-link" href="{% url 'login' %}">Login</a> <!-- send to login page -->
 					</li>
+					{% endif %}
 				</ul>
 			</div>
 		</div> <!-- container div  -->

@@ -1,9 +1,27 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
-login!
 
+{% if error %} <!-- if block from signup function from  -->
+{{ error }} <!-- display POST error from signup function -->
+<br />
+<br />
+{% endif %}
+
+<h1>Login</h1>
+
+<form method="POST" action="{% url 'login' %}">{% csrf_token %} <!-- security -->
+Username:
+<br/>
+<input type="text" name="username" />
+<br/>
+Password:
+<br/>
+<input type="Password" name="password" />
+<br/>
+<br/>
+<input class="btn btn-primary" type="submit" value="Login!"> <!-- boot strap -->
+</form>
 {% endblock %}
 
-<!-- copied from home.html -->
+<!-- copied from signup.html -->
