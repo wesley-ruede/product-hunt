@@ -163,3 +163,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static') #added static root
 #login defined -- accounts
 #logout defined -- accounts
 #base.html updated
+#created models -- products
