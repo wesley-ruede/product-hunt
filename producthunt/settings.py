@@ -154,3 +154,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static') #added static root
 #added static dirs
 #collected static
 #adjusted logo
+#defined url paths -- producthunt
+#defined url paths -- accounts
+#created signup.html -- accounts
+#created login.html -- accounts
+#defined views -- accounts
+#user accounts created
