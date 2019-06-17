@@ -133,6 +133,8 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static') #added static root
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #added static root
 
 #settings initialized -> postgresql and .gitignore before runserver
 #migrations complete before runserver
@@ -164,3 +166,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static') #added static root
 #logout defined -- accounts
 #base.html updated
 #created models -- products
+#forwarded products urls -- products
+#defined urls -- products
+#defined view -- products
+#created create.html -- products 
+#updated create.html -- products
+#updated view create function -- products
+#updated static files -- urls.py
+#set media root
