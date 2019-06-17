@@ -13,7 +13,7 @@
 
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}"> <!-- Open Iconic -->
 
 
 	<style>
@@ -51,7 +51,7 @@
 				<ul class="navbar-nav ml-auto"> <!-- moved nav-items left -->
 					{% if user.is_authenticated %} <!-- if user is logged in -->
 					<li class="nav-item"> 
-						<a class="nav-link" href="{% url 'create' %}"><span class="oi oi-plus"></span></a> <!-- create product from anywhere on site -->
+						<a class="nav-link" href="{% url 'create' %}"><span class="oi oi-plus"></span></a> <!-- Open Iconic -->
 					<li class="nav-item"> 
 						<a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">Log out</a> <!-- send to signup page -->
 						<form id="logout" method="POST" action="{% url 'logout'%}">{% csrf_token %}
