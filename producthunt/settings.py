@@ -177,3 +177,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #added static root
 #added iconic -- base.html
 #defined detail views -- products
 #created detail.html -- products
+#styled detail.html -- products

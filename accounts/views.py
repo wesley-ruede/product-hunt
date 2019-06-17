@@ -15,7 +15,7 @@ def signup(request): #reference to urls.py
 				auth.login(request, user) #user created and authenticated
 				return redirect('home') #send user home
 		else:
-			return render(request, 'accounts/signup.html', {'error': 'Passwords must match'})
+			return render(request, 'accounts/signup.html', {'error': 'Passwords must match'}) #forward user to signup.html and deliver error 
 	else:
 		#user wants to enter info
 		return render(request, 'accounts/signup.html') #reference to html in template
